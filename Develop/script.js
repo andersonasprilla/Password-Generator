@@ -20,6 +20,17 @@ function generatePassword() {
   var numericChars = "0123456789";
   var specialChars = "!@#$%^&*()_-+=<>?";
 
+
+  // Set up initial variables
+  var passwordLength = prompt("Enter password length (between 8 and 128 characters):");
+  
+  // Validate password length
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+    alert("Please enter a valid password length.");
+    return;
+  }
+
+  
 }
 
 
