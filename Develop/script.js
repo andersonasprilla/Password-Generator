@@ -42,6 +42,28 @@ function generatePassword() {
     return;
   }
 
+    // Combine selected character sets
+    var charset = "";
+    if (includeLowercase) {
+      charset += lowercaseChars;
+    }
+    if (includeUppercase) {
+      charset += uppercaseChars;
+    }
+    if (includeNumeric) {
+      charset += numericChars;
+    }
+    if (includeSpecial) {
+      charset += specialChars;
+    }  
+    // Generate password based on selected criteria
+    var password = "";
+    for (var i = 0; i < passwordLength; i++) {
+      var randomIndex = Math.floor(Math.random() * charset.length);
+      password += charset[randomIndex];
+    }
+  
+    return password;
 
 }
 
