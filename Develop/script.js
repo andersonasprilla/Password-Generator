@@ -30,7 +30,19 @@ function generatePassword() {
     return;
   }
 
-  
+  // Ask for character types
+  var includeLowercase = confirm("Include lowercase characters?");
+  var includeUppercase = confirm("Include uppercase characters?");
+  var includeNumeric = confirm("Include numeric characters?");
+  var includeSpecial = confirm("Include special characters?");
+
+  // Validate that at least one character type is selected
+  if (!(includeLowercase || includeUppercase || includeNumeric || includeSpecial)) {
+    alert("Please select at least one character type.");
+    return;
+  }
+
+
 }
 
 
